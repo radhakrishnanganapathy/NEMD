@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  # Node.js and Express.js service
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mongo
+    volumes:
+      - .:/app
+
+  # MongoDB service
+  mongo:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodbdata:/data/db
+
+# Define a named volume for MongoDB data persistence
+volumes:
+  mongodbdata:
