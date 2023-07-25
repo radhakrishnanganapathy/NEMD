@@ -43,7 +43,7 @@ down commend -> docker compose up -d -- build or docker compose up -d --build
 
 # 2 method of run procuder
 First clone the repo
-1.npm run -> cd app (go to app folder) and using "npm start" commend
+1. npm run -> cd app (go to app folder) and using "npm start" commend
 2. in main folder run above docker commend.
 
 
